@@ -2,6 +2,7 @@ dependencies {
     compileOnly libs.bundles.lombok
     annotationProcessor libs.bundles.lombok
 
+    api project(':jddd-core')
     api libs.bundles.utilies
     api libs.bundles.jackson
     api libs.bundles.log

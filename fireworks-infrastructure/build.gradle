@@ -1,0 +1,10 @@
+dependencies {
+    compileOnly libs.bundles.lombok
+    annotationProcessor libs.bundles.lombok
+
+    api project(':fireworks-domain')
+    api libs.bundles.commonmark
+    api libs.bundles.jacksonxml
+    api libs.bundles.servlet
+
+}
