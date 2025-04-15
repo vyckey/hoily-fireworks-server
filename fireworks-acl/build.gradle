@@ -6,4 +6,5 @@ dependencies {
     implementation project(':fireworks-infrastructure')
     implementation libs.bundles.springboot
 
+    testImplementation libs.bundles.springboottest
 }
