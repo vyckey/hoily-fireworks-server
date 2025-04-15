@@ -4,9 +4,12 @@ dependencies {
 
     api project(':fireworks-domain')
     api libs.bundles.commonmark
+    api libs.bundles.commoncodec
     api libs.bundles.jacksonxml
     api libs.bundles.servlet
     implementation libs.bundles.spring
     implementation libs.bundles.springboot
+
+    testImplementation libs.bundles.springboottest
 
 }

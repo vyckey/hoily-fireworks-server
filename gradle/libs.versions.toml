@@ -14,6 +14,7 @@ apacheCommon = '3.16.0'
 commonConfig = '2.11.0'
 collections = '3.2.2'
 commonmark = '0.17.0'
+commonCodec = '1.15'
 servletApi = '6.1.0'
 spring = '6.2.5'
 springboot = '3.4.4'
@@ -36,15 +37,20 @@ log4j-api = { module = 'org.apache.logging.log4j:log4j-api', version.ref = 'apac
 slf4j-impl = { module = 'org.apache.logging.log4j:log4j-slf4j2-impl', version.ref = 'apacheLog4j' }
 log4j = { module = 'log4j:log4j', version.ref = 'log4j' }
 commonmark = { module = 'com.atlassian.commonmark:commonmark', version.ref = 'commonmark' }
+commons-codec = { module = 'commons-codec:commons-codec', version.ref = 'commonCodec' }
+jcommander = { module = 'com.beust:jcommander', version = '1.82' }
 jackson-xml = { module = 'com.fasterxml.jackson.dataformat:jackson-dataformat-xml', version.ref = 'jackson' }
 servlet-api = { module = 'jakarta.servlet:jakarta.servlet-api', version.ref = 'servletApi' }
+jakarta-annotation = { module = 'jakarta.annotation:jakarta.annotation-api', version = '3.0.0' }
 spring-core = { module = 'org.springframework:spring-core', version.ref = 'spring' }
 spring-context = { module = 'org.springframework:spring-context', version.ref = 'spring' }
 spring-beans = { module = 'org.springframework:spring-beans', version.ref = 'spring' }
 spring-aop = { module = 'org.springframework:spring-aop', version.ref = 'spring' }
-spring-boot = { module = 'org.springframework:spring-boot', version.ref = 'springboot' }
+spring-boot = { module = 'org.springframework.boot:spring-boot', version.ref = 'springboot' }
 spring-boot-starter = { module = 'org.springframework.boot:spring-boot-starter', version.ref = 'springboot' }
 spring-boot-web = { module = 'org.springframework.boot:spring-boot-starter-web', version.ref = 'springboot' }
+spring-boot-test = { module = 'org.springframework.boot:spring-boot-starter-test', version.ref = 'springboot' }
+spring-boot-log4j2 = { module = 'org.springframework.boot:spring-boot-starter-log4j2', version.ref = 'springboot' }
 
 [bundles]
 unittest = ['junit', 'jmockit']
@@ -55,6 +61,10 @@ lombok = ['lombok']
 utilies = ['commons-lang3', 'commons-config', 'collections4', 'guava']
 log = ['slf4j-api', 'log4j', 'log4j-core', 'log4j-api', 'slf4j-impl']
 commonmark = ['commonmark']
+commoncodec = ['commons-codec']
+jcommander = ['jcommander']
 servlet = ['servlet-api']
+jakartaAnnotation = ['jakarta-annotation']
 spring = ['spring-core', 'spring-context', 'spring-beans', 'spring-aop']
 springboot = ['spring-boot', 'spring-boot-starter', 'spring-boot-web']
+springboottest = ['spring-boot-test', 'spring-boot-log4j2']

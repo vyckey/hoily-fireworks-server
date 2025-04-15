@@ -1,0 +1,11 @@
+dependencies {
+    compileOnly libs.bundles.lombok
+    annotationProcessor libs.bundles.lombok
+
+    api project(':fireworks-application')
+    api project(':fireworks-contract')
+    api libs.bundles.jakartaAnnotation
+    implementation libs.bundles.springboot
+
+    testImplementation libs.bundles.springboottest
+}
