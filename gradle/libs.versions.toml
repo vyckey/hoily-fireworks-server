@@ -18,6 +18,7 @@ commonCodec = '1.15'
 servletApi = '6.1.0'
 spring = '6.2.5'
 springboot = '3.4.4'
+aspects = '6.2.5'
 
 [libraries]
 junit = { module = 'junit:junit', version.ref = 'junit' }
@@ -46,6 +47,7 @@ spring-core = { module = 'org.springframework:spring-core', version.ref = 'sprin
 spring-context = { module = 'org.springframework:spring-context', version.ref = 'spring' }
 spring-beans = { module = 'org.springframework:spring-beans', version.ref = 'spring' }
 spring-aop = { module = 'org.springframework:spring-aop', version.ref = 'spring' }
+spring-aspects = { module = 'org.springframework:spring-aspects', version.ref = 'aspects' }
 spring-boot = { module = 'org.springframework.boot:spring-boot', version.ref = 'springboot' }
 spring-boot-starter = { module = 'org.springframework.boot:spring-boot-starter', version.ref = 'springboot' }
 spring-boot-web = { module = 'org.springframework.boot:spring-boot-starter-web', version.ref = 'springboot' }
@@ -65,6 +67,6 @@ commoncodec = ['commons-codec']
 jcommander = ['jcommander']
 servlet = ['servlet-api']
 jakartaAnnotation = ['jakarta-annotation']
-spring = ['spring-core', 'spring-context', 'spring-beans', 'spring-aop']
+spring = ['spring-core', 'spring-context', 'spring-beans', 'spring-aop', 'spring-aspects']
 springboot = ['spring-boot', 'spring-boot-starter', 'spring-boot-web']
 springboottest = ['spring-boot-test', 'spring-boot-log4j2']
