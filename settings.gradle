@@ -1,0 +1,9 @@
+rootProject.name = 'fireworks'
+
+include 'jddd-core'
+include 'fireworks-domain'
+include 'fireworks-acl'
+include 'fireworks-infrastructure'
+include 'fireworks-application'
+include 'fireworks-contract'
+include 'fireworks-api'

@@ -1,0 +1,9 @@
+dependencies {
+    compileOnly libs.bundles.lombok
+    annotationProcessor libs.bundles.lombok
+
+    api libs.bundles.utilies
+    api libs.bundles.jackson
+    api libs.bundles.log
+
+}
