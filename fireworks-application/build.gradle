@@ -1,0 +1,10 @@
+dependencies {
+    compileOnly libs.bundles.lombok
+    annotationProcessor libs.bundles.lombok
+
+    api project(':fireworks-domain')
+    api project(':fireworks-infrastructure')
+    api project(':fireworks-acl')
+    api libs.bundles.springboot
+
+}
