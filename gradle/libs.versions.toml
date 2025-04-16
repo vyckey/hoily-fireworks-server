@@ -16,9 +16,13 @@ collections = '3.2.2'
 commonmark = '0.17.0'
 commonCodec = '1.15'
 servletApi = '6.1.0'
+httpclient5 = '5.4.3'
 spring = '6.2.5'
 springboot = '3.4.4'
+springai = '1.0.0-M6'
+springaiOpenai = '1.0.0-M7'
 aspects = '6.2.5'
+openai = '1.3.0'
 
 [libraries]
 junit = { module = 'junit:junit', version.ref = 'junit' }
@@ -43,6 +47,7 @@ jcommander = { module = 'com.beust:jcommander', version = '1.82' }
 jackson-xml = { module = 'com.fasterxml.jackson.dataformat:jackson-dataformat-xml', version.ref = 'jackson' }
 servlet-api = { module = 'jakarta.servlet:jakarta.servlet-api', version.ref = 'servletApi' }
 jakarta-annotation = { module = 'jakarta.annotation:jakarta.annotation-api', version = '3.0.0' }
+httpclient5 = { module = 'org.apache.httpcomponents.client5:httpclient5', version.ref = 'httpclient5' }
 spring-core = { module = 'org.springframework:spring-core', version.ref = 'spring' }
 spring-context = { module = 'org.springframework:spring-context', version.ref = 'spring' }
 spring-beans = { module = 'org.springframework:spring-beans', version.ref = 'spring' }
@@ -51,8 +56,12 @@ spring-aspects = { module = 'org.springframework:spring-aspects', version.ref = 
 spring-boot = { module = 'org.springframework.boot:spring-boot', version.ref = 'springboot' }
 spring-boot-starter = { module = 'org.springframework.boot:spring-boot-starter', version.ref = 'springboot' }
 spring-boot-web = { module = 'org.springframework.boot:spring-boot-starter-web', version.ref = 'springboot' }
+spring-boot-webflux = { module = 'org.springframework.boot:spring-boot-starter-webflux', version.ref = 'springboot' }
 spring-boot-test = { module = 'org.springframework.boot:spring-boot-starter-test', version.ref = 'springboot' }
 spring-boot-log4j2 = { module = 'org.springframework.boot:spring-boot-starter-log4j2', version.ref = 'springboot' }
+spring-ai = { module = 'org.springframework.ai:spring-ai-core', version.ref = 'springai' }
+spring-ai-openai = { module = 'org.springframework.ai:spring-ai-openai', version.ref = 'springaiOpenai' }
+openai = { module = 'com.openai:openai-java', version.ref = 'openai' }
 
 [bundles]
 unittest = ['junit', 'jmockit']
@@ -67,6 +76,9 @@ commoncodec = ['commons-codec']
 jcommander = ['jcommander']
 servlet = ['servlet-api']
 jakartaAnnotation = ['jakarta-annotation']
+httpclient5 = ['httpclient5']
 spring = ['spring-core', 'spring-context', 'spring-beans', 'spring-aop', 'spring-aspects']
-springboot = ['spring-boot', 'spring-boot-starter', 'spring-boot-web']
+springboot = ['spring-boot', 'spring-boot-starter', 'spring-boot-web', 'spring-boot-webflux']
+springai = ['spring-ai', 'spring-ai-openai']
 springboottest = ['spring-boot-test', 'spring-boot-log4j2']
+openai = ['openai']

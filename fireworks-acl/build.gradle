@@ -4,7 +4,10 @@ dependencies {
 
     api project(':fireworks-domain')
     implementation project(':fireworks-infrastructure')
-    implementation libs.bundles.springboot
+    api libs.bundles.springboot
+    api libs.bundles.springai
+    api libs.bundles.openai
+    api libs.bundles.httpclient5
 
     testImplementation libs.bundles.springboottest
 }
