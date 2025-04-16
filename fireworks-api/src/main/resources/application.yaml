@@ -1,0 +1,15 @@
+server:
+  name: fireworks-server
+  port: 8080
+
+logging:
+  config: classpath:log4j2.xml
+
+wechat:
+  enabled: false
+  app:
+    id: <appid>
+    secret: <secret>
+  authentication:
+    token: <token>
+    encodingAESKey: <encodingAESKey>

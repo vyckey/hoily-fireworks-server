@@ -6,12 +6,12 @@ package com.hoily.service.fireworks.acl.wechat;
  * @author vyckey
  * 2023/2/10 10:00
  */
-public class WechatRestException extends RuntimeException {
-    public WechatRestException(String message) {
+public class WechatApiException extends RuntimeException {
+    public WechatApiException(String message) {
         super(message);
     }
 
-    public WechatRestException(String message, Throwable cause) {
+    public WechatApiException(String message, Throwable cause) {
         super(message, cause);
     }
 }

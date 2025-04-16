@@ -8,6 +8,7 @@ dependencies {
     api libs.bundles.springai
     api libs.bundles.openai
     api libs.bundles.httpclient5
+    api libs.bundles.retrofit
 
     testImplementation libs.bundles.springboottest
 }

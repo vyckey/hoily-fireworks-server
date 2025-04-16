@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="INFO" xmlns="https://logging.apache.org/xml/ns"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="
+                   https://logging.apache.org/xml/ns
+                   https://logging.apache.org/xml/ns/log4j-config-2.xsd">
+    <Properties>
+        <Property name="PID">????</Property>
+        <Property name="APP_NAME">fireworks-server</Property>
+        <Property name="LOG_LEVEL_PATTERN">%5level</Property>
+        <Property name="LOG_PATTERN">[$${env:HOST:-localhost}][${APP_NAME}][%d{yyyy-MM-dd HH:mm:ss.SSS}][${LOG_LEVEL_PATTERN}][${sys:PID}][%15.15t][%-40.40c{1.}] : [%X{logId}] %m%n</Property>
+        <Property name="LOG_PATH">./logs</Property>
+    </Properties>
+    <DynamicThresholdFilter key="logLevel" defaultThreshold="ERROR" onMatch="ACCEPT" onMismatch="DENY">
+        <KeyValuePair key="TRACE" value="TRACE"/>
+        <KeyValuePair key="DEBUG" value="DEBUG"/>
+        <KeyValuePair key="INFO" value="INFO"/>
+        <KeyValuePair key="WARN" value="WARN"/>
+        <KeyValuePair key="ERROR" value="ERROR"/>
+        <KeyValuePair key="FATAL" value="FATAL"/>
+        <KeyValuePair key="OFF" value="OFF"/>
+    </DynamicThresholdFilter>
+    <Appenders>
+        <Console name="Console" target="SYSTEM_OUT" follow="true">
+            <PatternLayout pattern="${LOG_PATTERN}"/>
+        </Console>
+
+        <RollingFile name="RollingFile" fileName="${LOG_PATH}/${APP_NAME}.log"
+                     filePattern="${LOG_PATH}/$${date:yyyy-MM}/${APP_NAME}-%d{yyyy-MM-dd}-%i.log">
+            <PatternLayout pattern="${LOG_PATTERN}" charset="utf-8"/>
+            <Policies>
+                <OnStartupTriggeringPolicy/>
+                <SizeBasedTriggeringPolicy limit="20 MB"/>
+                <TimeBasedTriggeringPolicy/>
+            </Policies>
+            <DefaultRolloverStrategy max="100"/>
+        </RollingFile>
+
+        <Async name="Async" bufferSize="1024" blocking="false">
+            <AppenderRef ref="Console"/>
+            <AppenderRef ref="RollingFile"/>
+        </Async>
+    </Appenders>
+    <Loggers>
+        <Logger name="org.apache.catalina.startup.DigesterFactory" level="error"/>
+        <Logger name="org.apache.catalina.util.LifecycleBase" level="error"/>
+        <Logger name="org.apache.coyote.http11.Http11NioProtocol" level="warn"/>
+        <logger name="org.apache.sshd.common.util.SecurityUtils" level="warn"/>
+        <Logger name="org.apache.tomcat.util.net.NioSelectorPool" level="warn"/>
+        <Logger name="org.hibernate.validator.internal.util.Version" level="warn"/>
+        <Root level="info">
+            <AppenderRef ref="Async"/>
+        </Root>
+    </Loggers>
+</Configuration>
