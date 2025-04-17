@@ -1,6 +1,6 @@
 package com.hoily.service.fireworks.server.aop;
 
-import com.hoily.service.fireworks.contract.response.BaseResponse;
+import com.hoily.service.fireworks.api.response.BaseResponse;
 import jakarta.servlet.http.HttpServletRequest;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

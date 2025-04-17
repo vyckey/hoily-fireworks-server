@@ -10,7 +10,7 @@ dependencies {
     annotationProcessor libs.bundles.lombok
 
     api project(':fireworks-application')
-    api project(':fireworks-contract')
+    api project(':fireworks-api')
     api libs.bundles.jakartaAnnotation
     implementation libs.bundles.springboot
 

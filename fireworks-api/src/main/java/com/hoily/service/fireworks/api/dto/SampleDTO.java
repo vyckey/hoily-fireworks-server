@@ -1,4 +1,4 @@
-package com.hoily.service.fireworks.contract.dto;
+package com.hoily.service.fireworks.api.dto;
 
 import java.io.Serializable;
 

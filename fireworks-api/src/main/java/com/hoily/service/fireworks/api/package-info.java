@@ -3,4 +3,4 @@
  *
  * @author vyckey
  */
-package com.hoily.service.fireworks.contract;
+package com.hoily.service.fireworks.api;

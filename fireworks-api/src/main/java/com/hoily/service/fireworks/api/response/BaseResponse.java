@@ -1,4 +1,4 @@
-package com.hoily.service.fireworks.contract.response;
+package com.hoily.service.fireworks.api.response;
 
 import lombok.Getter;
 import lombok.ToString;
