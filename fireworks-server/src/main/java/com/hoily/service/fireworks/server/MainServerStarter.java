@@ -1,4 +1,4 @@
-package com.hoily.service.fireworks.api;
+package com.hoily.service.fireworks.server;
 
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -25,12 +25,12 @@ import java.util.concurrent.TimeUnit;
 @SpringBootApplication
 @EnableAspectJAutoProxy(proxyTargetClass = true)
 @Import(ApplicationContext.class)
-public class ApiContext {
+public class MainServerStarter {
     @Value("${server.port}")
     private int serverPort;
 
     public static void main(String[] args) {
-        SpringApplication application = new SpringApplication(ApiContext.class);
+        SpringApplication application = new SpringApplication(MainServerStarter.class);
         application.setWebApplicationType(WebApplicationType.SERVLET);
         application.setRegisterShutdownHook(false);
         ConfigurableApplicationContext ctx = application.run(args);
@@ -66,7 +66,7 @@ public class ApiContext {
             if (factory instanceof TomcatServletWebServerFactory) {
                 TomcatServletWebServerFactory tomcatFactory = (TomcatServletWebServerFactory) factory;
                 tomcatFactory.addConnectorCustomizers(connector -> {
-                     connector.setPort(serverPort);
+                    connector.setPort(serverPort);
                 });
             }
         };

@@ -1,4 +1,4 @@
-package com.hoily.service.fireworks.api.controller;
+package com.hoily.service.fireworks.server.controller;
 
 import com.hoily.service.fireworks.infrastructure.common.utils.StringUtils;
 import lombok.AllArgsConstructor;

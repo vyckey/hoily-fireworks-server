@@ -1,4 +1,4 @@
-package com.hoily.service.fireworks.api.aop;
+package com.hoily.service.fireworks.server.aop;
 
 import com.hoily.service.fireworks.contract.response.BaseResponse;
 import jakarta.servlet.http.HttpServletRequest;

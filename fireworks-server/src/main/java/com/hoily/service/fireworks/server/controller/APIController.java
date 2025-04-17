@@ -1,4 +1,4 @@
-package com.hoily.service.fireworks.api.controller;
+package com.hoily.service.fireworks.server.controller;
 
 import com.google.common.collect.Maps;
 import com.hoily.service.fireworks.contract.response.BaseResponse;
