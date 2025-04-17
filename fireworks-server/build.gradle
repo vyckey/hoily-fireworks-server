@@ -1,3 +1,9 @@
+plugins {
+    id 'org.springframework.boot' version '3.4.4'
+}
+
+version = '1.0.0'
+
 jar {
     archiveFileName = "fireworks-server.jar"
     manifest {

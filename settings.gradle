@@ -1,3 +1,14 @@
+pluginManagement {
+    repositories {
+        maven {
+            url "https://maven.aliyun.com/repository/public"
+        }
+        gradlePluginPortal()
+        mavenCentral()
+        mavenLocal()
+    }
+}
+
 rootProject.name = 'fireworks'
 
 include 'jddd-core'
@@ -5,5 +16,5 @@ include 'fireworks-domain'
 include 'fireworks-acl'
 include 'fireworks-infrastructure'
 include 'fireworks-application'
-include 'fireworks-contract'
+include 'fireworks-api'
 include 'fireworks-server'
