@@ -39,7 +39,6 @@ public class APIController {
     }
 
     @GetMapping("")
-    @ResponseBody
     public BaseResponse<?> abstractInfo() {
         Map<String, Object> infoMap = Maps.newHashMap();
         infoMap.put("author", "vyckey");

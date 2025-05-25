@@ -5,6 +5,7 @@ server:
 logging:
   config: classpath:log4j2.xml
 
+
 wechat:
   enabled: false
   app:
@@ -13,3 +14,22 @@ wechat:
   authentication:
     token: <token>
     encodingAESKey: <encodingAESKey>
+
+modelProviders:
+  openai:
+    baseUrl: <baseUrl>
+    apiKey: <apiKey>
+
+spring:
+  data:
+    redis:
+      host: localhost
+      port: 6379
+      database: 0
+      connect-timeout: 10s
+      timeout: 5s
+
+      lettuce:
+        pool:
+          min-idle: 0
+          max-idle: 8

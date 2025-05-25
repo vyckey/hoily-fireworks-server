@@ -6,7 +6,9 @@ dependencies {
     api project(':fireworks-infrastructure')
     api project(':fireworks-acl')
     api libs.bundles.springboot
+    api libs.bundles.springboot.data
     implementation libs.bundles.jcommander
+    implementation libs.bundles.picocli
 
     testImplementation libs.bundles.springboottest
 }

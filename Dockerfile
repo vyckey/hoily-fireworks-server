@@ -1,4 +1,4 @@
-FROM docker.m.daocloud.io/gradle:8.7-jdk17 AS GRADLE_BUILDER
+FROM gradle:8.7-jdk17 AS GRADLE_BUILDER
 
 WORKDIR /app/
 

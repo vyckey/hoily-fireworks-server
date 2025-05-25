@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/api/health/")
-public class HealthCheckController implements ApplicationListener<ApplicationReadyEvent> {
+public class HealthController implements ApplicationListener<ApplicationReadyEvent> {
     private volatile boolean ready = false;
 
     @Override
@@ -18,7 +18,6 @@ public class HealthCheckController implements ApplicationListener<ApplicationRea
     }
 
     @RequestMapping(value = "/ready", method = {RequestMethod.HEAD, RequestMethod.GET})
-    @ResponseBody
     public String ready() {
         if (ready) {
             return "true";
